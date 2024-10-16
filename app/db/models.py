@@ -1,0 +1,9 @@
+from sqlalchemy import Column, Integer, Float, ARRAY
+from app.db.base import Base
+
+
+class Image(Base):
+    __tablename__ = "images"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    depth = Column(Float)
+    pixels = Column(ARRAY(Integer))
